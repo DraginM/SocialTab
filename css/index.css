@@ -45,8 +45,14 @@ img {
 .hobby ul {
     flex-direction: column;
     gap: 0;
-    list-style: square;
-    padding-left: 20px;
+    list-style: "◆ ";
+    padding-left: 16px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .links {
@@ -57,7 +63,15 @@ img {
     flex-wrap: wrap;
 }
 
+footer span.hand {
+    color: var(--secc2);
+    text-align: right;
+}
+
 @media screen and (max-width: 795px) {
+    .container {
+        margin-top: 0;
+    }
     .main {
         display: flex;
         flex-direction: column;
@@ -69,5 +83,34 @@ img {
 }
 
 @media screen and (max-width: 547px) {
-    
+    .hobby {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 503px) {
+    .hobby {
+        font-size: 16px;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 436px) {
+    .links {
+        flex-wrap: nowrap;
+    }
+
+    .links ul {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 377px) {
+    h1 {
+        font-size: x-large;
+    }
+
+    h2 {
+        font-size: larger;
+    }
 }

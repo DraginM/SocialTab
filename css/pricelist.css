@@ -1,0 +1,25 @@
+header, .action {
+    display: flex;
+    gap: 8px;
+    justify-content: space-between;
+}
+
+table {
+    background: var(--bg);
+    border-spacing: 0;
+}
+
+tbody > tr:nth-child(2n-1) {
+    background-color: var(--bg2);
+}
+
+th, td {
+    padding: 12px 16px;
+}
+th {
+    background-color: var(--main);
+    color: var(--bg2);
+}
+tbody > tr:nth-child(2n-1) > th {
+    background-color: var(--main2);
+}
