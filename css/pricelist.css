@@ -4,6 +4,23 @@ header, .action {
     justify-content: space-between;
 }
 
+ul.tags li {
+    padding: 8px 12px;
+    border-radius: 24px;
+}
+li.y {
+    background-color: #278142;
+    color: #3dd137;
+}
+li.m {
+    background-color: #9b8028;
+    color: #d2d42c;
+}
+li.n {
+    background-color: #911526;
+    color: #da3030;
+}
+
 table {
     background: var(--bg);
     border-spacing: 0;
