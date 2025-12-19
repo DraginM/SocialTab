@@ -69,9 +69,6 @@ footer span.hand {
 }
 
 @media screen and (max-width: 795px) {
-    .container {
-        margin-top: 0;
-    }
     .main {
         display: flex;
         flex-direction: column;
