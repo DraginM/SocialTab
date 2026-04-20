@@ -1,0 +1,29 @@
+/* ===== РЕЧЕВОЙ ПУЗЫРЬ «Обо мне» ===== */
+.bubble {
+  background: var(--accent-blue);
+  border-radius: 24px;
+  position: relative;
+  margin: -16px 0 0;
+  padding: 20px;
+
+  width: 62%;
+  margin-left: auto;
+}
+
+.bubble::after {
+  content: '';
+  position: absolute;
+  top: 32px;
+  left: -24px;
+  width: 0;
+  height: 0;
+  border: 28px solid transparent;
+  border-right-color: var(--accent-blue);
+  border-left: 0;
+}
+
+.bubble p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  text-align: justify;
+}

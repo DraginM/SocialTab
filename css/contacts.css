@@ -1,0 +1,65 @@
+/* ===== КОНТАКТЫ ===== */
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border: 2px solid var(--ink-main);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s;
+  cursor: pointer;
+  font-family: var(--fhand);
+  font-size: 1.1rem;
+}
+
+.btn.primary {
+  background: var(--accent-yellow);
+  color: var(--ink-main);
+}
+
+.btn.secondary {
+  background: var(--accent-green);
+  color: var(--ink-main);
+}
+
+.btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 3px 3px 0 var(--ink-main);
+}
+
+.btn.primary:hover { 
+  background: var(--accent-pink);
+}
+
+.btn.secondary:hover { 
+  background: var(--accent-blue);
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: brightness(0);
+}
+.icon.teleg { background-image: url(../img/teleg.svg); }
+.icon.email { background-image: url(../img/email.svg); }
+.icon.vk    { background-image: url(../img/vk.svg); }
+
+.note {
+  text-align: right;
+  font-family: var(--fhand);
+  margin-top: 16px;
+  font-size: 1.1rem;
+  border-top: 1px dashed var(--ink-blue);
+  padding-top: 8px;
+}

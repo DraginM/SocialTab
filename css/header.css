@@ -1,0 +1,69 @@
+/* ===== ЛИСТ БУМАГИ (шапка) ===== */
+.panel.header {
+  position: relative;
+  padding: 20px 40px 40px;
+  margin-top: 60px;
+  overflow: visible;
+}
+
+/* Гвоздик */
+.pin {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  width: 14px;
+  height: 14px;
+  background: radial-gradient(circle at 30% 30%, #ff6b6b, #c92a2a);
+  border-radius: 50%;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+  z-index: 20;
+}
+
+/* Фото в стиле полароид */
+.photo-polaroid {
+  position: absolute;
+  top: -20px;
+  left: 40px;
+  width: 240px;
+  background: var(--bg-paper);
+  padding: 16px 16px 48px 16px;
+  box-shadow: 3px 3px 8px rgba(0,0,0,0.3);
+  transform: rotate(-3deg);
+  z-index: 10;
+  transition: transform 0.3s;
+}
+
+.photo-polaroid:hover {
+  transform: rotate(0deg) scale(1.02);
+  z-index: 15;
+}
+
+.photo-polaroid .tape {
+  top: -8px;
+  right: 25%;
+  width: 55px;
+  height: 20px;
+}
+
+.photo-polaroid .avatar {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: sepia(15%) contrast(105%);
+}
+
+/* Текст шапки */
+.header-text {
+  margin-left: 270px;
+  padding-top: 10px;
+}
+
+.header-text h1 {
+  letter-spacing: 4px;
+  color: var(--ink-blue);
+}
+
+.header-text .subtitle {
+  font-family: var(--fhand);
+  font-size: 1.3rem;
+}

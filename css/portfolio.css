@@ -1,0 +1,182 @@
+/* ===== ГАЛЕРЕЯ-БЛОКНОТ ===== */
+.gallery-notebook {
+  position: relative;
+  /* Тонкие линии тетради */
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 31px,
+    rgba(74, 74, 74, 0.12) 31px,
+    rgba(74, 74, 74, 0.12) 32px
+  );
+  border: 2px solid var(--ink-main);
+  padding: 40px 30px 30px 50px; /* Отступ слева под переплёт */
+  box-shadow: 8px 14px 0 rgba(39, 37, 41, 0.342);
+  transform: scale(1.05);
+  margin: 16px 0 48px;
+}
+
+.gallery-notebook:hover {
+  box-shadow: 6px 16px 0 rgba(32, 30, 34, 0.171);
+  transform: scale(1.07);  
+}
+
+/* Красная линия полей */
+.gallery-notebook::before {
+  content: '';
+  position: absolute;
+  left: 42px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(201, 42, 42, 0.25);
+  pointer-events: none;
+}
+
+/* Спиральный переплёт */
+.spiral-binding {
+  position: absolute;
+  left: -12px;
+  top: 24px;
+  bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  z-index: 5;
+}
+
+.spiral-ring {
+  width: 24px;
+  height: 12px;
+  border: 3px solid var(--ink-main);
+  border-radius: 50%;
+  background: var(--cork-dark); /* Пробка просвечивает сквозь кольцо */
+  box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+}
+
+/* Сетка галереи */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 24px;
+  margin: 20px 0;
+}
+
+.gallery-item {
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 2px;
+  box-shadow: 2px 2px 0 rgba(43, 43, 43, 0.1);
+  background: var(--bg-page);
+  /* Случайный наклон через CSS-переменную */
+  transform: rotate(var(--rotate, 0deg));
+}
+
+/* Наклоны для каждой карточки */
+.gallery-item:nth-child(1) { --rotate: -2deg; }
+.gallery-item:nth-child(2) { --rotate: 1.5deg; }
+.gallery-item:nth-child(3) { --rotate: -1deg; }
+.gallery-item:nth-child(4) { --rotate: 2.5deg; }
+.gallery-item:nth-child(5) { --rotate: -1.5deg; }
+
+.gallery-item:hover {
+  transform: scale(1.03);
+  z-index: 2;
+}
+
+/* === МОДАЛЬНОЕ ОКНО (DIALOG) === */
+.art-dialog {
+  z-index: 20;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  padding: 16px;
+  background: var(--bg-page);
+  max-width: 90vw;
+}
+
+.art-dialog::backdrop {
+  z-index: 15;
+  background: rgba(23, 20, 25, 0.473);
+  backdrop-filter: blur(5px);
+}
+
+.art-dialog img {
+  object-fit: contain;
+  height: 85vh;
+}
+
+.close-dialog {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: var(--accent-pink);
+  color: var(--ink-main);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  transition: transform 0.2s;
+}
+
+.close-dialog:hover {
+  transform: rotate(90deg);
+}
+
+/* === КНОПКА-ДАЛЕЕ (ВКЛАДКА) === */
+.gallery-footer {
+  margin-top: 20px;
+  text-align: right;
+  position: relative;
+}
+
+.next-tab {
+  display: inline-block;
+  position: relative;
+  padding: 10px 24px 10px 16px;
+  background: var(--accent-yellow);
+  color: var(--ink-main);
+  text-decoration: none;
+  font-family: var(--fhand);
+  font-size: 1.2rem;
+  border: 2px solid var(--ink-main);
+  border-radius: 8px 24px 8px 8px; /* Форма вкладки */
+  box-shadow: 3px 3px 0 var(--ink-main);
+  transition: all 0.2s;
+}
+
+.next-tab:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0 var(--ink-main);
+  background: var(--accent-pink);
+}
+
+.gallery-footer .note {
+  margin-top: 12px;
+  font-size: 1rem;
+  color: var(--ink-light);
+}
+
+/* === АДАПТИВ === */
+@media (max-width: 600px) {
+  .gallery-notebook {
+    padding: 40px 20px 20px 20px;
+    background-image: none; /* Убираем линии на мобильных */
+  }
+  .gallery-notebook::before { display: none; }
+  .spiral-binding { display: none; }
+  .gallery-item img { height: 140px; }
+}

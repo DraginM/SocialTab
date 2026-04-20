@@ -1,0 +1,110 @@
+/* ===== ДОСКА ИНТЕРЕСОВ ===== */
+.interests-board {
+  min-height: auto;
+  padding: 40px 30px 50px;
+}
+
+.interests-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+/* ===== ОБРЫВКИ БУМАГИ ===== */
+.paper-scrap {
+  background: var(--bg-paper);
+  padding: 16px 12px;
+  position: relative;
+  box-shadow: 3px 5px 0 rgba(43, 43, 43, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  
+  /* Неровные края для эффекта обрывка */
+  border-radius: 2px 4px 3px 2px;
+}
+
+.paper-scrap:hover {
+  transform: scale(1.05) rotate(0deg) !important;
+  box-shadow: 2px 7px 0 rgba(43, 43, 43, 0.2);
+  z-index: 10;
+}
+
+/* Разные размеры и наклоны */
+.paper-scrap.scrap-1 {
+  width: 210px;
+  transform: rotate(-3deg);
+  background-color: var(--accent-pink);
+}
+
+.paper-scrap.scrap-2 {
+  width: 200px;
+  transform: rotate(2deg);
+  background-color: var(--accent-green);
+}
+
+.paper-scrap.scrap-3 {
+  width: 230px;
+  transform: rotate(-1.5deg);
+  background-color: var(--accent-blue);
+}
+
+/* Маленькие заметки */
+.paper-scrap.scrap-note {
+  width: 190px;
+  padding: 16px 12px;
+  font-size: 0.95rem;
+}
+
+.paper-scrap.scrap-4 {
+  transform: rotate(4deg);
+  background-color: var(--accent-yellow);
+}
+
+.paper-scrap.scrap-5 {
+  transform: rotate(-2.5deg);
+  background-color: var(--accent-green);
+}
+
+.paper-scrap.scrap-6 {
+  transform: rotate(1.5deg);
+  background-color: var(--accent-pink);
+}
+
+/* Заголовки в обрывках */
+.paper-scrap h3 {
+  margin-bottom: 6px;
+  border-bottom: 1px dashed var(--ink-blue);
+}
+
+.paper-scrap p {
+  line-height: 1.4;
+}
+
+/* Гвоздики на обрывках */
+.paper-scrap .pin {
+  top: 8px;
+  right: 8px;
+  width: 12px;
+  height: 12px;
+}
+
+/* ===== АДАПТИВ ===== */
+@media (max-width: 600px) {
+  .interests-grid {
+    gap: 16px;
+  }
+  
+  .paper-scrap,
+  .paper-scrap.scrap-1,
+  .paper-scrap.scrap-2,
+  .paper-scrap.scrap-3,
+  .paper-scrap.scrap-note,
+  .paper-scrap.scrap-4,
+  .paper-scrap.scrap-5,
+  .paper-scrap.scrap-6 {
+    width: 140px;
+    transform: rotate(0deg) !important;
+  }
+}

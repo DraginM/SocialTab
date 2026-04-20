@@ -1,100 +1,176 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./img/favicon.svg">
-    <title>Dragin - Визитка</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/index.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Dragin • Визитка</title>
+    <link rel="icon" href="./img/favicon.svg" />
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/bubble.css">
+    <link rel="stylesheet" href="./css/hobby.css">
+    <link rel="stylesheet" href="./css/portfolio.css">
+    <link rel="stylesheet" href="./css/contacts.css">
+    <link rel="stylesheet" href="./css/responsive.css">
 </head>
 <body>
-    <div class="container">
-        <div class="main">
-            <div class="img">
-                <img src="./img/persona.jpg" alt="Автор">
-                <img src="./img/persona.jpg" alt="Персонаж">
+    <main class="page">
+        <!-- Панель 1: Заголовок -->
+        <section class="panel header">
+            <!-- Фото, выходящее за рамки -->
+            <div class="photo-polaroid">
+                <div class="tape"></div>
+                <img src="./img/persona.jpg" alt="Dragin" class="avatar" />
             </div>
-            <div class="text">
-                <h1 class="mid">Dragin | Драгин</h1>
-                <span class="hand up mid">20 лет - Он/Они - RU/EN</span>
-                <h2>Обо мне:</h2>
-                <p class="up">Товарищ-рисовака, что любит послушать чужие монологи о всяком разном. Создатель сайтиков с бумажкой. Рисую свой комикс и принимаю заказики.</p>
-                <h2>Увлечения:</h2>
-                <div class="hobby">
-                    <ul>
-                        <li>
-                            Рисование
-                            <ul>
-                                <li>Семиреализм</li>
-                                <li>Живописность</li>
-                                <li>Диджитал</li>
-                            </ul>
-                        </li>
-                        <li>
-                            НРИ
-                            <ul>
-                                <li>D&D</li>
-                                <li>Legends in the Mist</li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li>
-                            Игры
-                            <ul>
-                                <li>Undertale</li>
-                                <li>One Shot</li>
-                                <li>Wandersong</li>
-                                <li>Gris</li>
-                                <li>To the Moon</li>
-                                <li>Nine Sols</li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li>
-                            Онлайн
-                            <ul>
-                                <li>Minecraft</li>
-                                <li>Stardew Valley</li>
-                                <li>Peak</li>
-                                <li>Moon Hunters</li>
-                            </ul>
-                        </li>
-                        <li>Славянщина</li>
-                        <li>Таблицы</li>
-                    </ul>
+            
+            <!-- Текст на бумаге -->
+            <div class="header-text">
+                <h1>Dragin M</h1>
+                <p class="subtitle hand">20 лет • Он/Они • RU/EN • Художник</p>
+            </div>
+            
+            <div class="pin"></div>
+        </section>
+
+        <!-- Комикс-баббл) -->
+        <section class="panel bubble">
+            <p>Добрейшего! Я еле активный рисовака в диджитал. С удовольсвием приму заказ на рисунок. (*^▽^*)<br>
+            Хочу однажды сделать свой комикс. Пока просто живу и учусь на ИТ.</p>
+        </section>
+
+        <!-- Панель2: Интересы -->
+        <section class="panel interests-board">
+            <div class="tape"></div>
+            <h2>Что меня цепляет</h2>
+            
+            <div class="interests-grid">
+                <div class="paper-scrap scrap-1">
+                    <div class="pin" style="background: radial-gradient(circle at 30% 30%, #4ecdc4, #2a9d8f);"></div>
+                    <h3>🎨 Рисование</h3>
+                    <p>Стараюсь метить в живописный семи-реализм, но не всегда выходит. Очень сильные навыки копирования.</p>
+                </div>
+                
+                <div class="paper-scrap scrap-3">
+                    <div class="pin" style="background: radial-gradient(circle at 30% 30%, #ffd166, #e9b308);"></div>
+                    <h3>🎮 Игры</h3>
+                    <p>Мне очень важен сюжет и наоборот не интересен экшон. Фаворитами могу назвать: Undertale, In Stars and Time, One Shot, Citizen Sleeper и Wandersong. Я абсолютно нормально к ним отношусь...</p>
+                </div>
+                
+                <div class="paper-scrap scrap-2">
+                    <div class="pin" style="background: radial-gradient(circle at 30% 30%, #e63946, #c1121f);"></div>
+                    <h3>🎲 НРИ</h3>
+                    <p>Играю в Днд с 2022. Чуть-чуть побыл мастером и пробую другие системы. Блестящие камни с цифрами делают клац-клац!</p>
+                </div>
+                
+                <div class="paper-scrap scrap-note scrap-4">
+                    <div class="pin" style="background: radial-gradient(circle at 30% 30%, #a8dadc, #457b9d);"></div>
+                    <h3>🌐 Онлайн-игры</h3>
+                    <p>Стараюсь иногда поглядывать с друзьями: MineCraft, Moon Hunters (RIP)</p>
+                </div>
+                
+                <div class="paper-scrap scrap-note scrap-5">
+                    <div class="pin" style="background: radial-gradient(circle at 30% 30%, #f4a261, #e76f51);"></div>
+                    <h3>? Что-то</h3>
+                    <p>Здесь я напишу еще что-то</p>
+                </div>
+                
+                <div class="paper-scrap scrap-note scrap-6">
+                    <div class="pin" style="background: radial-gradient(circle at 30% 30%, #2a9d8f, #264653);"></div>
+                    <h3>✨ Напоследок</h3>
+                    <p>Люблю работать с таблицами и немного изучаю славянщину.</p>
                 </div>
             </div>
-        </div>
-        <footer>
-            <div class="links hand">
-                <ul>
-                    <li><a href="" class="button" title="В разработке ¯\_(ツ)_/¯">
-                        <div class="icon" id="comic"></div><s>Комикс</s>
-                    </a></li>
-                    <li><a href="https://web.telegram.org/a/#-1002128045322" class="button">
-                        <div class="icon" id="teleg"></div>ТГканал
-                    </a></li>
-                    <li><a href="./pricelist.html" class="button">
-                        <div class="icon" id="price"></div>Прайслист
-                    </a></li>
-                </ul>
-                <ul>
-                    <li><a href="https://web.telegram.org/a/#5241780422" class="button secc">
-                        <div class="icon" id="teleg"></div>Телеграм
-                    </a></li>
-                    <li><a href="https://vk.com/draginm" class="button secc">
-                        <div class="icon" id="vk"></div>ВКонтакте
-                    </a></li>
-                    <li><a href="mailto:draginmaprings@gmail.com" class="button secc" title="draginmaprings@gmail.com">
-                        <div class="icon" id="email"></div>Почта
-                    </a></li>
-                </ul>
+        </section>
+
+        <!-- Панель 3: Контакты -->
+        <section class="panel contacts" id="contacts">
+            <h2>Связаться</h2>
+            <div class="links">
+                <a href="mailto:draginmaprings@gmail.com" class="btn secondary">
+                <span class="icon email"></span>Почта
+                </a>
+                <a href="https://vk.com/draginm" class="btn secondary">
+                <span class="icon vk"></span>ВКонтакте
+                </a>
+                <a href="https://t.me/DraginM" class="btn secondary">
+                <span class="icon teleg"></span>Телеграм
+                </a>
+                <a href="https://t.me/LivingStoneArt" class="btn primary">
+                <span class="icon teleg"></span>ТГ-канал
+                </a>
             </div>
-            <span class="hand">Уточняйте откуда вы, чтоб я не пугался " ^^</span>
-        </footer>
-    </div>
+            <p class="note hand">P.S. Уточняйте, откуда вы, чтоб я не пугался ^^</p>
+        </section>
+
+        <!-- Панель 4: Работы -->
+        <section class="panel gallery-notebook">            
+            <!-- Спиральный переплёт -->
+            <div class="spiral-binding">
+                <div class="spiral-ring"></div>
+                <div class="spiral-ring"></div>
+                <div class="spiral-ring"></div>
+                <div class="spiral-ring"></div>
+                <div class="spiral-ring"></div>
+                <div class="spiral-ring"></div>
+            </div>
+
+            <h2>Галерея</h2>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item" data-src="./img/art1.jpg">
+                    <img src="./img/art1.jpg" alt="Работа 1" loading="lazy">
+                </div>
+
+                <div class="gallery-item" data-src="./img/art2.jpg">
+                    <img src="./img/art2.jpg" alt="Работа 2" loading="lazy">
+                </div>
+
+                <div class="gallery-item" data-src="./img/art3.jpg">
+                    <img src="./img/art3.jpg" alt="Работа 3" loading="lazy">
+                </div>
+                
+                <!-- Добавляй блоки .gallery-item по необходимости -->
+            </div>
+
+            <div class="gallery-footer">
+                <a href="https://t.me/LivingStoneArt" class="next-tab" target="_blank">
+                <span class="tab-text">Смотреть ещё в канале →</span>
+                </a>
+                <p class="note hand">Больше процессов и черновиков там</p>
+            </div>
+        </section>
+
+        <dialog id="global-dialog" class="art-dialog">
+            <button class="close-dialog" type="button" aria-label="Закрыть">×</button>
+            <img id="dialog-image" src="" alt="Увеличенное изображение">
+        </dialog>
+    </main>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const dialog = document.getElementById('global-dialog');
+        const dialogImg = document.getElementById('dialog-image');
+        const closeBtn = dialog.querySelector('.close-dialog');
+        
+        // 1. Открытие
+        document.querySelectorAll('.gallery-item').forEach(item => {
+        item.addEventListener('click', () => {
+            const src = item.getAttribute('data-src');
+            if (src) {
+            dialogImg.src = src;
+            dialog.showModal();
+            }
+        });
+        });
+
+        // 2. Закрытие (кнопка)
+        closeBtn.addEventListener('click', () => dialog.close());
+
+        // 3. Закрытие (клик по фону)
+        dialog.addEventListener('click', (e) => {
+        if (e.target === dialog) dialog.close();
+        });
+    });
+    </script>
 </body>
 </html>

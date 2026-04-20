@@ -1,0 +1,56 @@
+/* ===== АДАПТИВ ===== */
+@media (max-width: 768px) {
+  .paper-sheet {
+    padding: 80px 24px 24px;
+    overflow: hidden;
+  }
+  
+  .photo-polaroid {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 150px;
+    margin: 0 auto 20px;
+    transform: rotate(-2deg);
+  }
+  
+  .header-text {
+    margin-left: 0;
+    text-align: center;
+    padding-top: 0;
+  }
+  
+  .pin {
+    display: none;
+  }
+  
+  .bubble::after,
+  .bubble::before {
+    left: 50%;
+    margin-left: -16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-text h1 {
+    font-size: 1.8rem;
+  }
+  
+  .photo-polaroid {
+    width: 130px;
+  }
+  
+  .links {
+    justify-content: center;
+  }
+  
+  .note {
+    text-align: center;
+  }
+  
+  .art-card:nth-child(1),
+  .art-card:nth-child(2),
+  .art-card:nth-child(3) {
+    transform: rotate(0deg);
+  }
+}
