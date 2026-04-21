@@ -26,7 +26,7 @@
   left: 40px;
   width: 240px;
   background: var(--bg-paper);
-  padding: 16px 16px 48px 16px;
+  padding: 16px 16px 48px;
   box-shadow: 3px 3px 8px rgba(0,0,0,0.3);
   transform: rotate(-3deg);
   z-index: 10;
@@ -66,4 +66,89 @@
 .header-text .subtitle {
   font-family: var(--fhand);
   font-size: 1.3rem;
+}
+
+
+
+/* ===== HEADER: планшеты и ниже (≤768px) ===== */
+@media (max-width: 768px) {
+  
+  /* Панель шапки: убираем лишние отступы */
+  .panel.header {
+    padding: 16px; /* Сверху место под фото, если оно ещё абсолютное */
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 16px;
+  }
+  
+  /* Фото: делаем относительным, центрируем, убираем вылет */
+  .photo-polaroid {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 55vw;
+    margin: 0 auto; /* Центрируем + отступ снизу */
+    transform: rotate(-1deg); /* Оставляем лёгкий наклон, но без риска */
+  }
+  
+  .photo-polaroid:hover {
+    transform: rotate(0deg) scale(1.02);
+  }
+  
+  /* Текст: убираем отступ слева, центрируем */
+  .header-text {
+    margin-left: 0;
+    padding-top: 0;
+    text-align: center;
+  }
+  
+  /* Гвоздик: сдвигаем, чтобы не наезжал на фото */
+  .panel.header .pin {
+    right: 20px ;
+  }
+}
+
+/* ===== HEADER: телефоны (≤480px) ===== */
+@media (max-width: 480px) {
+  
+  /* Панель: ещё компактнее */
+  .panel.header {
+    margin-top: 0;
+  }
+  
+  /* Фото: чуть меньше, без наклона */
+  .photo-polaroid {
+    transform: none; /* Убираем наклон совсем */
+  }
+  
+  .photo-polaroid:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Заголовок: минимальный читаемый размер */
+  .header-text h1 {
+    font-size: 1.6rem;
+    letter-spacing: 2px; /* Твой трекинг, но чуть мягче */
+  }
+  
+  .header-text .subtitle {
+    font-size: 1.1rem;
+  }
+}
+
+/* ===== HEADER: очень узкие (≤360px) ===== */
+@media (max-width: 360px) {
+  
+  .photo-polaroid {
+    width: 100%;
+  }
+  
+  .header-text h1 {
+    font-size: 1.4rem;
+  }
+  
+  .header-text .subtitle {
+    font-size: 1rem;
+  }
 }

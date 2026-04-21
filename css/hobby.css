@@ -90,12 +90,23 @@
   height: 12px;
 }
 
-/* ===== АДАПТИВ ===== */
-@media (max-width: 600px) {
-  .interests-grid {
-    gap: 16px;
-  }
+
+
+@media (max-width: 768px) {
   
+  /* 1. Уменьшаем отступы самой доски */
+  .interests-board {
+    padding: 30px 16px;
+  }
+
+  /* 2. Сетка превращается в вертикальную стопку */
+  .interests-grid {
+    flex-direction: column;
+    gap: 20px; /* Равномерные отступы между записками */
+  }
+
+  /* 3. Выравниваем все записки по ширине и убираем наклон */
+  /* Перечисляем все классы, чтобы перебить специфичные ширины (210px, 230px и т.д.) */
   .paper-scrap,
   .paper-scrap.scrap-1,
   .paper-scrap.scrap-2,
@@ -104,7 +115,25 @@
   .paper-scrap.scrap-4,
   .paper-scrap.scrap-5,
   .paper-scrap.scrap-6 {
-    width: 140px;
-    transform: rotate(0deg) !important;
+    width: 100%; /* Занимают всю доступную ширину */
+    max-width: 100%;
+    transform: none; /* Убираем вращение */
+    margin-bottom: 0; /* Сбрасываем возможные отступы */
+  }
+
+  /* 4. Корректируем ховер-эффект */
+  /* На мобильном не хочется, чтобы блок сильно скакал */
+  .paper-scrap:hover {
+    transform: scale(1.02); /* Легкое увеличение без вращения */
+    box-shadow: 2px 5px 0 rgba(43, 43, 43, 0.15);
+  }
+  
+  /* 5. Типографика внутри */
+  .paper-scrap h3 {
+    font-size: 1.2rem; /* Чуть крупнее заголовки */
+  }
+  
+  .paper-scrap p {
+    font-size: 1rem; /* Комфортный размер текста */
   }
 }

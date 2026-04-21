@@ -114,3 +114,86 @@ h2 {
   border-bottom: 2px dashed var(--ink-blue);
   display: inline-block;
 }
+
+
+
+/* ===== МОБИЛЬНЫЕ: до 768px ===== */
+@media (max-width: 768px) {
+  
+  /* Убираем горизонтальный скролл от теней и наклонов */
+  .page {
+    overflow-x: hidden;
+    padding: 0 4px; /* Компенсация теней по краям */
+  }
+  
+  /* Панели: убираем вращение, делаем тени компактнее */
+  .panel,
+  .panel:nth-child(even),
+  .paper-sheet {
+    transform: none;
+    box-shadow: 3px 3px 0 rgba(43, 43, 43, 0.15);
+    margin: 20px 0;
+    padding: 20px 16px;
+  }
+  
+  .panel:hover,
+  .panel:nth-child(even):hover,
+  .paper-sheet:hover {
+    transform: none;
+    box-shadow: 4px 4px 0 rgba(43, 43, 43, 0.2);
+  }
+  
+  /* Скотч: делаем меньше и ближе к краю */
+  .tape {
+    width: 50px;
+    height: 18px;
+    top: -10px;
+    right: 16px;
+  }
+  
+  /* Заголовки: чуть уменьшаем, если экран очень узкий */
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  h2 {
+    font-size: 1.3rem;
+  }
+}
+
+/* ===== ОЧЕНЬ МАЛЕНЬКИЕ ЭКРАНЫ: до 480px ===== */
+@media (max-width: 480px) {
+  
+  /* Ещё компактнее паддинги */
+  .panel,
+  .paper-sheet {
+    padding: 16px 12px;
+  }
+  
+  /* Заголовки: минимальный читаемый размер */
+  h1 {
+    font-size: 1.6rem;
+  }
+  
+  h2 {
+    font-size: 1.2rem;
+  }
+  
+  /* Кнопки контактов: на всю ширину */
+  .tear-off-ticket,
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ===== КРОШЕЧНЫЕ ЭКРАНЫ: до 360px ===== */
+@media (max-width: 360px) {
+  
+  h1 { font-size: 1.4rem; }
+  h2 { font-size: 1.1rem; }
+  
+  .hand {
+    font-size: 1rem;
+  }
+}
